@@ -2,15 +2,15 @@
 
 #### Your name
 
-TODO
+Ivan Zou
 
 #### Your section leader's name
 
-TODO
+Tomoya Kanno
 
 #### Project title
 
-TODO
+Lost Garden
 
 ***
 
@@ -18,12 +18,12 @@ Short answers for the below questions suffice. If you want to alter your plan fo
 
 #### What have you done for your project so far?
 
-TODO
+I have designed the characters, worked on the background, and implemented sound tracks.
 
 #### What have you not done for your project yet?
 
-TODO
+I have not yet created the main part of the game. The fighting, the enemies, health bars, etc.
 
 #### What problems, if any, have you encountered?
 
-TODO
+The language I'm writing in is a little different, but  it's doable.

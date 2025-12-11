@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://b18dqaxkimdxk"]
+
+[ext_resource type="Script" uid="uid://3ca6qypl6y3o" path="res://scripts/hud.gd" id="1_oo0fn"]
+[ext_resource type="PackedScene" uid="uid://b2ptptu6oe5uo" path="res://scenes/inventory_ui.tscn" id="2_5ysmq"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_oo0fn")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 146.0
+offset_bottom = 27.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HealthBar" type="TextureProgressBar" parent="Panel/HBoxContainer"]
+layout_mode = 2
+value = 100.0
+
+[node name="ManaBar" type="TextureProgressBar" parent="Panel/HBoxContainer"]
+layout_mode = 2
+max_value = 50.0
+value = 50.0
+
+[node name="InventoryUI" parent="." instance=ExtResource("2_5ysmq")]
+offset_left = -183.0
+offset_top = -75.0
+offset_right = -183.0
+offset_bottom = -75.0

@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://cmulbp8c564g7"]
+
+[ext_resource type="PackedScene" uid="uid://yo1724cvykqi" path="res://scenes/Player.tscn" id="1_sugp2"]
+[ext_resource type="PackedScene" uid="uid://bj1cy1qssjv4a" path="res://scenes/boss_knight.tscn" id="2_sugp2"]
+[ext_resource type="PackedScene" uid="uid://b18dqaxkimdxk" path="res://scenes/hud.tscn" id="3_tbgi4"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_sugp2"]
+
+[node name="Main" type="Node2D"]
+
+[node name="World" type="Node2D" parent="." groups=["player"]]
+position = Vector2(-209, 0)
+
+[node name="Player" parent="World" instance=ExtResource("1_sugp2")]
+position = Vector2(0, -2)
+
+[node name="BossKnight" parent="World" instance=ExtResource("2_sugp2")]
+position = Vector2(-412, -123)
+
+[node name="HUD" parent="." instance=ExtResource("3_tbgi4")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-208, 0)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-210, -2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1, 1)
+shape = SubResource("WorldBoundaryShape2D_sugp2")
